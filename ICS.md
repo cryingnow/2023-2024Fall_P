@@ -28,7 +28,7 @@ Teacher:陈向群，刘先华
 1byte=8bits
 不同类型数据对应不同的字节数。比如int型和float型对应4个字节，char型和double型对应8个字节（在64位系统中）。 
 区分大小端：
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309232220836.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309232220836.png)
 
 ### 1.3寻址和子节顺序
 ### 1.4表示字符串
@@ -47,12 +47,12 @@ Teacher:陈向群，刘先华
 ### 2.1整型数据类型
 #### unsigned
 直接根据每一位二进制计算即可。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309131339834.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309131339834.png)
 最小：0
 最大：2^w-1
 #### signed
 最高位代表的数要减去。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309131339314.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309131339314.png)
 变负数：取反+1。
 最小：-2^(w-1)
 最大：2^(w-1)-1
@@ -121,18 +121,18 @@ $x*y=U2T((x.y)mod2^w)$
 ## 4.浮点数
 ### 4.1二进制小数
 类比十进制的小数表示方式。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309181321436.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309181321436.png)
 - （无符号）除2相当于右移。
 - （无符号）乘2相当于左移。
 -   数字0.11111111...（2进制）始终小于1.0（无限接近） 1.0-ε
 ### 4.2IEEE浮点表示
 %%我们希望制定一个统一的标准,IEEE应运而生%%
 IEEE浮点标准用V=(-1)^s \* M \* 2^E 的形式来表示一个数。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309181350808.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309181350808.png)
 - 符号（sign）： s决定是负数还是正数，而对于数值0 的符号位解释作为特殊情况处理。
 - 尾数（significand）：M是一个<mark>二进制小数<mark>，它的范围是1~2-ε，或者是0~1-ε
 - 阶码（exponent）：E对浮点数进行加权，这个权重是2的E次幂（可能是负数）
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309181333653.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309181333653.png)
 #### ①规格化的值
 exp的位模式不全为0，也不全为1。
 - 阶码字段被解释为以bias（偏置）形式表示的有符号证书，也就是说，阶码的值E=e-Bias，其中e是无符号数，其表示为从0到k-1位$e(k-1)~...e0~$；而Bias是一个等于2^(k-1)-1的偏置值。
@@ -209,25 +209,25 @@ x86-64的机器代码与原始的C代码差别非常大，一些通常对C语言
 - 双字（double word）：32位
 - 四字（quad words）：64位
 x84-64中，数据类型long实现为64位，int存储为32位。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309201404236.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309201404236.png)
 浮点数有单精度（4字节）值和双精度（8字节）值。
 大多数GCC产生的汇编代码指令都有一个字符的后缀，表示操作数的大。例如mov的变种：movb movw movl movq
 ## 4.访问信息
 CPU包含一组16个存储64位值的**通用目的寄存器**，用来存储整数数据和指针，名字都以%r开头。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309201411387.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309201411387.png)
 <mark>以上，记住目前使用的**64位寄存器**。<mark>
 ### 4.1 操作数指示符
 操作数（operand）：指示出执行一个操作中要使用的源数据值，以及放置结果的目的位置。按照源数据值不同的操作数的可能性分为三种类型。
 - **立即数**：表示常数值。格式见图
 - **寄存器**：表示某个寄存器的内容，16个寄存器的低位1字节、2字节、4字节、8字节中的一个座位操作数，对应于8、16、32、64位。
 - **内存引用**：根据有效地址访问某个内存位置。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309201416203.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309201416203.png)
 ### 4.2 数据传送指令
 <mark>MOV类<mark>
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309201417465.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309201417465.png)
 源操作数指定的值是一个**立即数**，存储在寄存器或内存中，目的操作数指定一个位置，寄存器或内存地址。
 <mark>从Source->Destination<mark>。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309201419607.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309201419607.png)
 立即数、寄存器、内存之间的移动↑
 ### 4.3 数据传送示例
 ### 4.4 压入和弹出栈数据
@@ -268,20 +268,20 @@ if else的逻辑：汇编器为then-statement和else-statement各自产生的代
 ### 6.6 用条件传送来实现条件分支
 实现条件操作的传统方法：通过使用<mark>控制<mark>的条件转移。
 另一种替代的策略：使用<mark>数据<mark>的条件转移。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309251439476.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309251439476.png)
 ### 6.7 循环
 #### do-while循环
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309251442054.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309251442054.png)
 #### while循环
 ##### 编译1
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309251443660.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309251443660.png)
 ##### 编译2（guarded-do）
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309251444503.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309251444503.png)
 #### for循环
 ##### 编译1
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309251446988.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309251446988.png)
 ##### 编译2
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202309251446460.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309251446460.png)
 
 ### 6.8 switch语句
 <mark>multiway branching多重分支<mark>
@@ -342,7 +342,7 @@ if else的逻辑：汇编器为then-statement和else-statement各自产生的代
 **CPE**：Cycles Per Element，每元素的周期数=Total Cycles/Number of Elements.
 **最小二乘拟合**求运行时间y与被处理元素个数n的关系，得到的y=kn+b中，k即为CPE的有效值。
 ## 3.现代处理器
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311202013086.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311202013086.png)
 ### 3.1 架构（ICU和EU）
 超标量：**乱序的**
 #### 3.1.1控制单元ICU
@@ -386,7 +386,7 @@ if else的逻辑：汇编器为then-statement和else-statement各自产生的代
 	- 吞吐量界限：给出了CPE的最小界限。（由于需要利用加载单元从内存中读数据带来的限制，加载单元的个数限制了每个时钟周期读取数值的个数）
 ### 3.3 抽象模型
 #### 3.3.1 从机器级代码到数据流图
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311202059991.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311202059991.png)
 乘法被扩展为load和mul操作
 - 四类寄存器
 	- 只读：只用作源值，也可以作为数据或计算内存地址，但是不会被修改，比如循环combine4中的%rax
@@ -395,7 +395,7 @@ if else的逻辑：汇编器为then-statement和else-statement各自产生的代
 	- 循环：既为源值，也为目的。一次迭代中产生的值会在另一次迭代中用到。
 - **循环寄存器之间的操作链限制性能的数据相关**。
 - 画出combine4内循环的n次迭代计算的数据流表示，假设乘法延迟为5个周期，加法延迟为1个周期，那么左边也就是**乘法操作的序列形成了限制性能的关键路径**。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311202105441.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311202105441.png)
 左边链为关键路径，右边链以及循环中其他操作以及从内存中读取数据，都可以与乘法器并行进行。
 - 对于所有情况，如果运算的延迟L>1，（计算n个元素的乘积或者和大约需要L\*n+K个时钟周期，L是合并运算的延迟，K是调用函数和初始化以及终止循环的开销）那么可以看到测量出来的CPE就是L，表明这个链是制约性能的关键路径。
 #### 3.3.2其他性能因素
@@ -421,26 +421,26 @@ if else的逻辑：汇编器为then-statement和else-statement各自产生的代
 ###### 方法一.使用多个累计变量
 对于可结合或可交换的合并运算，比如整数加法或乘法，我们可以通过将一组合并运算分割成两个或者更多的部分，并在最后合并结果来提高性能。
 比如：
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311202125578.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311202125578.png)
 从2x1循环展开变成2x2循环展开：
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311202126454.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311202126454.png)
 由于每次两个vmulsd运算之间没有数据相关，每个关键路径只含n/2个操作，CPE就可以变为L/2.(2x1->2x2的情况下)如果改成kxk循环展开，可知当k足够大时，程序在所有情况下都能达到吞吐量界限（1.00）。<mark>这就要求循环展开因子k>=C\*L<mark>。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311202129208.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311202129208.png)
 ###### 方法二.重新结合变换
 从`acc=(acc OP data[i]) OP data[i+1]`
 变为`acc=acc OP(data[i] OP data[i+1])`
 差别在于两个括号是如何放置的，相当于改为了**2x1a**的循环展开形式。
 效果惊人！！
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311202132396.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311202132396.png)
 两次Load和一次mul数据相关，关键路径上的n次操作变为n/2
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311202135460.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311202135460.png)
 #### 3.4.2 限制因素
 ##### 1.寄存器溢出
 如果并行度p超过可用寄存器数量，某些临时值会放到内存，使CPE变差。
 ##### 2.分支预测和预测错误的惩罚
 不要过分关注可预测分支：在大的循环中，只有最后一步会预测错误。
 tip:书写更适合用于条件传送实现的代码，更“功能性”风格：
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311202142277.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311202142277.png)
 ### 3.5 理解内存性能
 #### 3.5.1 加载的性能
 测试表示延时为4
@@ -472,7 +472,7 @@ tip:书写更适合用于条件传送实现的代码，更“功能性”风格�
 	- 异常处理程序运行在内核模式下，这意味着它们对所有的系统资源都有完全的访问权限。
 - **异常处理程序一部分由硬件实现，另一部分由软件(操作系统)实现**
 ### 1.3 异常分类
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311231955962.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311231955962.png)
 #### 同步和异步
 - 同步：由于执行某条指令而发生的：系统调用，除零错误，机器检查等
 - 异步：不是由于访问某条指令而产生的，发生的时间不可确定：键盘的Crtl+C,DMA等
@@ -501,7 +501,7 @@ tip:书写更适合用于条件传送实现的代码，更“功能性”风格�
 		- 系统调用在**内核模式**中
 			- 允许系统调用执行特权指令
 			- 允许访问内核栈
-	![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311232107957.png)
+	![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311232107957.png)
 
 #### 1.3.3 故障
 - 同步
@@ -549,7 +549,7 @@ tip:书写更适合用于条件传送实现的代码，更“功能性”风格�
 - 在一个n位地址的机器上，**地址空间**是$2^n$个可能地址的集合。
 - 进程为每个地址提供它自己的**私有地址空间**
 - 每个空间都有相同的通用结构：
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311232157404.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311232157404.png)
 #### 2.2.5 用户模式和内核模式
 - **模式位**
 	- 设置模式位时，进程运行在内核模式(超级用户模式)
@@ -660,7 +660,7 @@ tip:书写更适合用于条件传送实现的代码，更“功能性”风格�
 - **调用一次从不返回**，加载并执行可执行目标文件filename
 - argv变量指向一个以null结尾的指针数组，期中每个指针都指向一个参数字符串。argv\[0]是可执行目标文件的名字。
 - envp变量指向一个以null结尾的指针数组，其中每个指针指向一个环境变量字符串，每个串都是"**name\<mark>value**"的名字-值对。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311241953130.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311241953130.png)
 
 ##### main函数
 - 传递给主函数：`int main(int argc,char **argv[],char **envp)`
@@ -711,7 +711,7 @@ tip:书写更适合用于条件传送实现的代码，更“功能性”风格�
 - 简单的shell只有一个内置命令-quit
 ## 3.信号Signal
 ### 3.1 引入
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311242024522.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311242024522.png)
 一条信号就是一条小消息，它通知进程系统中发生了一个某种类型的事件。
 - 常用信号：
 	- 2 SIGINT 终止 对应Ctrl+C
@@ -928,7 +928,7 @@ tip:书写更适合用于条件传送实现的代码，更“功能性”风格�
 		- O_TRUNC:如果文件已经存在，就截断它
 		- O_APPEND:每次写操作之前，设置文件位置到文件的结尾处。
 - mode参数指定新文件的访问权限位。位的符号名字见图
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311271846581.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311271846581.png)
 - 每个进程都有一个umask，进程open函数调用时，访问权限位被设置为mode&umask。
 ### 关闭
 - `int close(int fd)`关闭
@@ -1034,7 +1034,7 @@ struct stat
 	- 对同一描述符，对rio_readlineb和rio_readnb的调用可以任意交叉进行。
 - 带缓冲函数的调用不和无缓冲的rio_readn函数交叉使用
 - 每次打开一个描述符，都会调用一次rio_readinitb函数，将描述符fd和地址rp处的一个类型为rio_t的读缓冲区联系起来。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202311271955837.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311271955837.png)
 ### 9.3 核心
 - RIO读程序的核心是rio_read函数。
 	- 当调用rio_read要求读n个字节
@@ -1120,7 +1120,7 @@ struct stat
 					- 否则指向该虚拟页在磁盘上的起始位置
 		- 在DRAM中，每个进程都有自己的页表
 ##### 页命中Page Hit
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312041345329.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312041345329.png)
 - 如果想要获取VP2中的虚拟内存的一个字：
 	- 地址翻译硬件从内存中读取PTE3，根据有效位判断
 	- 发现VP2已经被缓存在DRAM中
@@ -1158,7 +1158,7 @@ struct stat
 	- WRITE位控制对页面的写
 - 如果一条指令违反了这些许可条件，CPU会触发一个一般保护故障，一般称为**段错误segmentation fault**
 ### 1.3 地址翻译
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312041418344.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312041418344.png)
 #### 1.3.1 翻译过程
 - 形式上，地址翻译是一个N元素的VAS中元素和一个M元素的PAS中元素之间的映射：
 	- MAP:VAS->PAS∪∅
@@ -1166,7 +1166,7 @@ struct stat
 	- n位虚拟地址包含两部分：p位的**虚拟页面偏移Virtual Page Offset,VPO**和一个n-p位的**虚拟页号Virtual Page Number,VPN**
 	- MMU利用VPN选择适当的PTE
 	- 页表条目中的**物理页号Physical Page Number,PPN**和虚拟地址中的VPO串联起来，就得到相应物理地址。也即**物理页面偏移Physical Page Offset**和VPO是相同的
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312041427884.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312041427884.png)
 
 ##### 页命中
 1. 处理器生成一个虚拟地址，并传送给MMU
@@ -1214,7 +1214,7 @@ struct stat
 	- 第k级页表中每个PTE包含某个物理页面的PPN，或者一个磁盘块的地址。
 		- 因此，在能够确定PPN前，MMU必须访问k个PTE
 		- 对于只有一级的页表结构，PPO和VPO是相同的。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312071928245.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312071928245.png)
 
 ## 2.案例研究：Intel Core i7/Linux内存系统
 ### 2.1 Core i7内存系统
@@ -1224,7 +1224,7 @@ struct stat
 	- L1、L2、L3、高速缓存是可以物理寻址的，块大小为64字节。L1、L2是8路组相联，L3是16路组相联
 - 页大小可以在启动时被配置为4KB或4MB，Linux使用的是4KB的页。
 ### 2.2 Core i7地址翻译
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312041639303.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312041639303.png)
 - 要求物理页表4KB对齐
 	- 对于1-3级PTE，只有40位有效物理地址，剩下的前面补0后面补1，保持4KB对齐获取下一级PTE的地址
 - 要求物理页4KB对齐
@@ -1306,7 +1306,7 @@ struct stat
 	2. bss区域是**请求二进制零**的，初始长度为0
 3. **映射共享区域**。动态链接共享对象
 4. **设置程序计数器PC**，使之指向代码区域的入口点。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312041927996.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312041927996.png)
 ### 3.5 使用mmap函数的用户级内存映射
 - `void *mmap(void *start,size_t length,int prot,int flags,int fd,off_t  offset)`
 	- 要求内核创建一个新的虚拟内存区域
@@ -1455,7 +1455,7 @@ struct stat
 	- 把前面块的已分配/空闲位存放在当前块中多出来的低位中
 	- 那么已分配的块就不需要脚部了
 	- 但是空闲块仍需要脚部
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312052108117.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312052108117.png)
 
 ##### 3.实现简单分配器(利用隐式空闲链表)
 - 假设：
@@ -1489,7 +1489,7 @@ struct stat
 	- 序言块和结尾块是一种消除合并时边界条件的技巧
 - 分配器使用一个单独的**私有全局变量heap_listp**，总是指向序言块
 ###### B.操作空闲链表的基本常数和宏
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312060958266.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312060958266.png)
 - PACK将大小和已分配位结合起来并返回一个值，可以把它存放在头部或者脚部中
 - GET读取和返回参数p引用的字
 	- 强制类型转换至关重要
@@ -1526,7 +1526,7 @@ struct stat
 ##### 4.显式空闲链表
 - 将空闲块组织为某种形式的显式数据结构
 - 比如：使用双向空闲链表，每个空闲块中都包含一个**前驱pred**和**后继succ**指针
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312061337282.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312061337282.png)
 - 这样可以
 	- 使首次适配的分配时间从块总数的线性时间减少到了空闲块数量的线性时间
 	- 释放一个块的时间取决于空闲链表中块的排序策略：
@@ -1676,7 +1676,7 @@ struct stat
 			- **包头**，包括包的大小以及源主机和目的主机的地址
 			- **有效载荷**，包括从源主机发出的数据位
 			- 示例：<mark>主机上的协议软件通过在数据前附加互联网络包头和 LANI 帧头，创建了 LANI 的帧。互联网络包头寻址到互联网络主机 ,LANI 帧头寻址到路由器。然后它传送此帧到适配器 注意，LANI 帧的有效载荷是一个**互联网络包**，而互联网络包的有效载荷是实际的用户数据。这种**封装**是基本的网络互联方法之一<mark>。
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312122200309.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312122200309.png)
 ## 2.全球IP因特网
 - 每台因特网主机都运行实现**TCP/IP(Transmission Control Protocol/Internet Protocol)协议**
 - 客户端和服务端混合使用**套接字接口**函数和Unix I/O函数来进行通信
@@ -1731,11 +1731,11 @@ struct stat
 		- 每个知名端口的服务器都有一个对应的知名的服务名
 - 一个连接由**套接字对socket pair**唯一确定
 ## 3.套接字接口socket interface
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312142102088.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312142102088.png)
 
 ### 3.1套接字地址结构
 - 从Linux程序的角度来看，套接字就是一个<mark>有相应描述符的打开文件<mark>，套接字地址放在sockaddr_in这个16字节结构中
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312142103452.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312142103452.png)
 - IP地址和端口号总是以网络字节顺序(大端法)存放
 - 简化代码示例:typedef struct sockaddr SA;
 ### 3.2 socket函数
@@ -1777,7 +1777,7 @@ struct stat
 	- 等待来自客户端的连接请求
 ### 3.5 主机和服务的转换
 #### getaddrinfo函数
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312142131216.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312142131216.png)
 
 - `int getaddrinfo(const char *host,const char *service,const struct addrinfo *hints,struct addrinfo **result)`
 	- 将主机名、主机服务、服务名、端口号的字符串表示转化为套接字地址结构
@@ -1898,7 +1898,7 @@ struct stat
 		- version:HTTP version
 		- **status-code状态码**：3位正整数，指明对请求的处理
 		- **status-message状态消息**：与错误代码等价的英文描述
-![image.png](https://zhangzinuo-pictures-pictures.oss-cn-beijing.aliyuncs.com/img/202312142216917.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312142216917.png)
 
 - 0或多个**响应报头response header**
 	- Content-Type:告诉客户端内容的MIME类型
