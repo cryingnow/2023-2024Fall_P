@@ -1,7 +1,7 @@
 Teacher:宋国杰
 # 0.评分
-![4f3c5262f018d74dbc538c7ea0b6590.jpg](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309131054925.jpg)
-![42c78c08525e60fb288238701beea85.jpg](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309150918484.jpg)
+![4f3c5262f018d74dbc538c7ea0b6590.jpg](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309131054925.jpg)
+![42c78c08525e60fb288238701beea85.jpg](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309150918484.jpg)
 
 
 # 1.概览
@@ -62,7 +62,7 @@ such as数组
 2. 重要的不是具体的时间，而是算法复杂性与输入数据规模（N）的关系。用N和B（基本操作）量级的函数关系来描述时间复杂性。
 #### 1.大O表示法
 1. 如果存在正数c和n0，使得对于任意的n>=n0，都有f(n)<=cg(n)，则称f(n)在集合O（g(n)）中，或简称f(n)是O（g(n)）的。
-2. ![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309150828884.png)
+2. ![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309150828884.png)
 3. 加法规则：f1(n)+f2(n)=O(max(f1(n),f2(n))).
 4. 乘法规则：f1(n).f2(n)=O(f1(n).f2(n))
 #### 2.Ω表示法
@@ -70,10 +70,10 @@ such as数组
 定义f(n)取值的`下限`。
 #### 3.θ表示法
 当上下界相同时可用此方法。
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309150832639.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309150832639.png)
 #### 最好、最坏和平均情况
 计算平均情况的复杂度应该考虑算法的所有输入情况，所以计算时应该把每种输入出现的**概率**作为权值加以考虑。
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309171621179.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309171621179.png)
 ### 时间和空间的折衷
 对于同一个问题求解，一般会存在多种算法。而这些算法在时间和空间开销上的优劣往往表现出“时空折衷”的性质。
 #### 空间换时间
@@ -81,13 +81,13 @@ such as数组
 ## 第一章课后思考
 1. 数据的存储方法有哪些？简要介绍每一种存储方法的特点。
 2. 给出一个求两个整数的最大公因数的算法，并分析其时间和空间复杂度。
-3. ![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310031705354.png)
+3. ![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310031705354.png)
 `卡特兰数`方法
 4. 快慢指针问题
 # 2.线性表
 ## 2.1 概念
 ### 2.1.1 抽象数据类型
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309171633220.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309171633220.png)
 ### 2.1.2线性表存储结构
 #### 定长、静态的存储结构（顺序表）
 #### 变长、动态的存储结构（链表）
@@ -145,14 +145,14 @@ delete d;
 - `插入删除时间代价O(1),但找第i个元素时间代价为O(n)。`
 ## 2.5 课后思考
 1. 设计算法将x插入到某递增有序的顺序表中。
-2. ![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310031708176.png)
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310031709767.png)
+2. ![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310031708176.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310031709767.png)
 # 3.栈和队列
 ## 3.1 栈（stack）
 **限制在一端访问**的线性表。
 `后进先出`
 压栈与出栈，栈顶与栈底
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309201119923.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309201119923.png)
 
 ### 3.1.1 栈的抽象数据类型
 - push 入栈
@@ -161,17 +161,17 @@ delete d;
 - isEmpty
 - isFull
 - clear
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309201116457.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309201116457.png)
 若有n个元素依次进栈，可能的出栈序列
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309201118569.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309201118569.png)
 ### 3.1.2 顺序栈
 采用顺序存储结构的栈。
 溢出：上溢（无空间可用）/下溢（无元素可删）
 #### 入栈push
 考虑栈已满的情况
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309201122807.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309201122807.png)
 #### 出栈pop
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309201123913.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309201123913.png)
 #### top
 从栈顶读取，但不弹出。
 #### 清空栈
@@ -199,7 +199,7 @@ delete d;
 在递归函数调用情况下，必须每调用一次分配一次，不能静态分配某些固定单元。
 于是，在内存中开辟一个成为运行栈的足够大的动态区。
 用作动态数据分配的存储区，分为堆（heap）和栈（stack）：
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309201149594.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309201149594.png)
 #### 2.表达式的求值
 一个表达式由`操作数、操作符、分界符`组成。
 - 表达式的组成
@@ -207,7 +207,7 @@ delete d;
 	- 语法成分集：由{<表达式>,<项>,<因子>,<常数>,<数字>}5个语法成分组成
 	- 语法公式集
 ##### 中缀表达式
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309231355794.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309231355794.png)
 
 ##### 前缀表达式
 ##### 后缀表达式
@@ -240,20 +240,20 @@ delete d;
 ### 主要操作
 #### 入队列（enQueue）
 - 顺序
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309231424955.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309231424955.png)
 - 链式
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309231428147.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309231428147.png)
 
 #### 出队列（deQueue）
 - 顺序
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309231425259.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309231425259.png)
 - 链式
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309231428446.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309231428446.png)
 
 #### 取队首元素（getFront）
 #### 判断队列是否为空（isEmpty）
 ### 抽象数据类型
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309231418323.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309231418323.png)
 ### 3.2.1 顺序队列
 用`向量`存储队列，两个变量分别指向首（front，`虚的`）尾（rear，`实的`）两端。
 #### 队列的溢出
@@ -274,7 +274,7 @@ delete d;
 - 超栈：插入限制在一端而删除却运行在两端进行。
 #### 思考：栈和队列的互模拟
 ## 3.3 课后思考
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310031711123.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310031711123.png)
 
 # 4.字符串
 ## 4.1 字符串的基本概念
@@ -306,23 +306,23 @@ char *strrchr(char*s,char c);//逆向寻找c在s中第一次出现的位置
 #### 构造与赋值算子
 #### 抽取子串函数
 #### 部分算子列表
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309231443784.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309231443784.png)
 
 ## 4.3 字符串的模式匹配
 ### 分类
 #### 精确匹配
 #### 近似匹配
 #### 模式匹配
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309231447300.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309231447300.png)
 ### 算法
 #### 朴素算法
 ##### 算法内容
 - 从主串T和模式串P的第一个字符开始比较。
 - 相等则比较后续字符。
 - 否则从新从T的第2个字符其再次与P的第1 个字符开始比较。
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309231449169.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309231449169.png)
 ##### 性能分析
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202309231450091.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202309231450091.png)
 #### KMP算法
 **P中每个字符对应一个移位值K，该值仅依赖于模式P本身，与目标T无关**。
 ##### 无回溯匹配
@@ -331,10 +331,10 @@ P.substr(0,i)=T.substr(j-i+1i)，且Pi不等于Tj
 希望立即确定右移的位数。
 ##### 循环串问题
 [KMP算法中的循环节问题_精简](https://blog.csdn.net/destiny1507/article/details/81588116)注意借鉴其中的KMP算法
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202312182044395.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312182044395.png)
 
 ## 4.4 课后思考
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310031717503.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310031717503.png)
 # 5.二叉树
 ## 5.1 基本概念
 ### 5.1.1满二叉树
@@ -357,7 +357,7 @@ P.substr(0,i)=T.substr(j-i+1i)，且Pi不等于Tj
 ### 5.1.4 二叉树的主要性质
 1. （**满二叉树定理**） 非空满二叉树树叶数等于其分支结点数加1. n0=n2+1
 	- `推理`：
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310111037323.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310111037323.png)
 应用：**证明在具有n个结点的k叉树中，有n(k-1)+1个指针是空的。**
 2. （**满二叉树定理推论**）一个非空二叉树的空子树（指针）数目等于其结点数+1.
 3. 任何一棵二叉树，度为0的结点n0比度为2的结点n2多1个。 n0=n2+1
@@ -367,8 +367,8 @@ P.substr(0,i)=T.substr(j-i+1i)，且Pi不等于Tj
 	2. 二叉树的**深度**定义为树中最长路径的长度。即书中层数最大的叶节点的层数。
 6. **有n个结点的完全二叉树的高度为[log2(n+1)]+1，深度为[log2(n+1)].**
 	- 证明：
-	![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310111046883.png)
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310111046084.png)
+	![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310111046883.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310111046084.png)
 7. 对于具有n个结点的完全二叉树，结点按层次由左到右编号，对任一结点i（0<=i<=n-1）有：
 	1. 如果i=0，则结点i是二叉树的根节点；若i>0，则其父节点编号是[(i-1)/2]。
 	2. 对于n-1
@@ -394,7 +394,7 @@ P.substr(0,i)=T.substr(j-i+1i)，且Pi不等于Tj
 ##### 前序周游
 ##### 中序周游
 ##### 后序周游
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310111134339.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310111134339.png)
 #### 遍历分析
 1. 抹去Visit(root)语句，发现访问路径实际上是相同的，只是访问结点的时间不同。
 每个结点经过**3次**。
@@ -413,7 +413,7 @@ P.substr(0,i)=T.substr(j-i+1i)，且Pi不等于Tj
 要借助**栈**来实现。
 多看多其中思路。
 后序：
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310130828829.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310130828829.png)
 #### 复杂性分析
 - 各种遍历中，每个结点都被访问且只被访问一次，时间代价为o(n)。
 - 非递归保存入出栈时间：不超过O(n)。
@@ -427,7 +427,7 @@ P.substr(0,i)=T.substr(j-i+1i)，且Pi不等于Tj
 ### 5.3.1 动态链式存储结构
 - 二叉链表表示法：本身数据和left和right指针，子女为空时指针为空指针。
 - 三叉链表：增加一个指针parent。
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310130850210.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310130850210.png)
 
 ### 5.3.2 静态顺序存储结构
 **静态数组存储（完全二叉树）**
@@ -487,12 +487,12 @@ Binary Search Tree（BST），也称二叉排序树。
 - 从完全二叉树的倒数第二层的i(n/2-1)位置开始，**从右至左，从下至上**依次调整。
 - 直到树根，整棵完全二叉树就成为一个堆。
 `筛选`：
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310181058095.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310181058095.png)
 `建堆`：
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310181058777.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310181058777.png)
 #### 建堆效率
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310181115409.png)
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310181119236.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310181115409.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310181119236.png)
 #### 移出最小值
 - 移出最小值（根节点）。
 - 将堆中最后一个位置上的元素移到根节点，利用siftdown调整。
@@ -508,7 +508,7 @@ Binary Search Tree（BST），也称二叉排序树。
 `定义`：具有最小带权路径长度的二叉树叫做**哈夫曼树（或称最优二叉树）**
 `外部结点`
 #### 建立
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310181152299.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310181152299.png)
 
 ### 5.6.2 Huffman编码
 对应的二进制前缀码就称作**Huffman**编码。
@@ -573,7 +573,7 @@ Binary Search Tree（BST），也称二叉排序树。
 - 树的归并容易：只需将一课树的根添加到另一棵树的孩子结点表中即可。
 ### 2.动态结点表示法：指针数组法
 ### 3.静态“左孩子/右兄弟”表示法
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310200938020.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310200938020.png)
 优点：
 - 空间效率比子结点表示法更高。
 - 每个结点仅需**固定大小的存储空间**。
@@ -583,8 +583,8 @@ Binary Search Tree（BST），也称二叉排序树。
 - 右子结点是结点原来的右侧兄弟结点。
 - 每个结点均包含固定数目的指针。
 判定寻找`父结点`：
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310200948906.png)
-![](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310270815363.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310200948906.png)
+![](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310270815363.png)
 
 ### 5.父指针表示法及在并查集中的应用
 - 每个结点仅保存指向其父结点的指针域即可，成为**父指针表示法**。
@@ -618,7 +618,7 @@ Binary Search Tree（BST），也称二叉排序树。
 - 当结点x的rtag为0时，它的rlink应指向结点序列中排在以结点x为根的子树中最后结点的后面的那个结点y。
 - **有兄弟结点和无孩子结点一一对应，满足栈特性。**
 结点x的兄弟结点y的确定方法：
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202310270932278.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202310270932278.png)
 **有兄弟就入栈，无孩子就出栈**。
 ### 6.3.3 带度数的后根次序表示法
 - info是结点的数据，degree是结点的度数。
@@ -881,7 +881,7 @@ for(int i=1;i<n;i++)
 空间效率：O(1)
 算法稳定性：**不稳定**
 ### 8.2.4 时间代价对比
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202311221023688.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311221023688.png)
 ## 8.3 Shell排序
 ### 思想
 - 又称“**缩小增量排序**”
@@ -928,7 +928,7 @@ void QuickSort(Record A[],int left,int right)
 划分为子序列L和R，L中记录都<=k，R中记录都>k.k处于正确排序位置。
 - 选择首元素为轴值：pivotValue=Array[left]。
 - 左右分别分析、比较、交换
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202311221057695.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311221057695.png)
 
 #### 递归排序
 对子序列进行递归划分，直到仅含1或9=0 个元素。
@@ -1101,7 +1101,7 @@ for(i=1;i<n;i++)
 AdjustRecord(Array,IndexArray,n);
 ```
 #### II.记录调整 AdjustRecord
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202311240947390.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202311240947390.png)
 ## 8.7 各种排序算法的理论和实验时间代价
 见PPT
 ## 8.8 排序问题的界
@@ -1194,7 +1194,7 @@ AdjustRecord(Array,IndexArray,n);
 	- 只需要和路径上的节点比较即可，而不需要和兄弟节点比较
 ##### 初始化败者树
 ##### 生成败者树
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202312061043230.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312061043230.png)
 ##### 重构败者树
 #### 多路归并的效率
 - 原始方法：找到每一个最小值的时间是θ(k)，产生一个大小为n的顺串的总时间是θ(k.n)
@@ -1329,7 +1329,7 @@ AdjustRecord(Array,IndexArray,n);
 	- 根据值的顺序
 		- 适合检索不成功的情况：一旦遇到一个比待检索关键码大的值，就停止检索
 		- 如果记录没排序或者根据访问频率排序，那么一次不成功的检索就需要访问同义词表中的所有记录
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202312080841938.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312080841938.png)
 - 优点：
 	- 处理冲突简单，**不同基地址冲突彼此独立**，平均查找长度短
 	- 链表结点动态申请，适用于表长不确定情况
@@ -1367,7 +1367,7 @@ AdjustRecord(Array,IndexArray,n);
 - 缺点：**聚集/堆积**
 	- 基地址不同的记录，争夺同一后继地址序列
 	- 小聚集汇成大聚集，导致很长的探查序列
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202312080922349.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312080922349.png)
 - `改进`：每次跳过常数c个而不是一个槽
 	- 探查序列中第i个槽`(h(K)+ic)modM`
 	- **基位置相邻**的记录就不会进入同一个探查徐磊了
@@ -1425,7 +1425,7 @@ AdjustRecord(Array,IndexArray,n);
 	- `遇到空标记检索停止；遇到删除标记检索继续`
 	- 被删除标记值称为**墓碑Tombstone**
 		- 新记录不能直接存储在墓碑中，**避免插入两个相同的关键码**
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202312131029689.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312131029689.png)
 
 ### 10.2.5 散列方法的效率分析
 - 衡量标准：插入、删除和检索操作的**ASL**
@@ -1435,7 +1435,7 @@ AdjustRecord(Array,IndexArray,n);
 		- 不考虑墓碑的情况，是尾部的空槽
 		- 考虑墓碑的情况，也要找到尾部，才能确定是否有重复记录
 - 散列效率与负载因子`α=N/M`有关
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202312131036421.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312131036421.png)
 - 结论1
 	- 散列方法
 		- 代价接近于访问一个记录的时间，比logn效率高
@@ -1547,7 +1547,7 @@ AdjustRecord(Array,IndexArray,n);
 - 若溢出，则结点分裂
 	- 指的是关键码插入后关键码数超过上界m-1，则要分裂
 	- 中间关键码连同新指针插入父结点
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202312131345016.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312131345016.png)
 
 - 若父结点也溢出，则继续分裂
 	- **分裂过程可能传达到根节点(则树升高一层)**
@@ -1608,7 +1608,7 @@ AdjustRecord(Array,IndexArray,n);
 - 包含N个关键码的B树，**有N+1个外部空指针**
 - 各层的结点数目
 	- 第0层至少1个结点，第1层至少2个结点
-	- 第k层至少![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202312150903339.png)个结点
+	- 第k层至少![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312150903339.png)个结点
 - 检索效率(内容见PPT)
 	- 存取次数
 - 结点分裂次数
@@ -1731,20 +1731,20 @@ AdjustRecord(Array,IndexArray,n);
 - 不成功检索
 	- 比较次数就等于被检索关键码所属的那个外部结点的层数
 - 平均比较次数
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202312220922475.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312220922475.png)
 - 最佳BST树
 	- 平均比较次数ASL最小的二叉搜索树
 	- 如何构造？
 #### 构造
 ##### 1.结点检索概率均等
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202312220933043.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312220933043.png)
 ##### 2.结点不等概率访问
 ##### 最佳BST树构造方法
 - 最佳BST树：**其任何子树都是最佳BST树**
 	- 可以从底层逐步构造最佳BST树
 	- 较大的最佳BST树由较小的最佳BST树构造而成
 	- **动态规划**的基本思想
-![image.png](https://zhangzinuo.oss-cn-beijing.aliyuncs.com/img/202312220949902.png)
+![image.png](https://zhangzinuo-pictures.oss-cn-beijing.aliyuncs.com/img/202312220949902.png)
 
 ### 12.4.2 平衡BST树(AVL树)
 - 基于树高平衡约束
